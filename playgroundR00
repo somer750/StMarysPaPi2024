@@ -91,7 +91,6 @@ def add_data(student): # function to read the button state and enter database re
     else:
             print("user timeout")
 
-
 def chaser(): # function to animate the button leds
         for x in range(5):
                 btn1Led.on()
@@ -109,7 +108,6 @@ def chaser(): # function to animate the button leds
                 btn4Led.off()
                 time.sleep(0.08)
                 btn5Led.off()
-
 
 
 # main logic loop below:
