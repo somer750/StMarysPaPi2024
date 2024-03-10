@@ -15,6 +15,11 @@ connection = mariadb.connect(
     host="192.168.2.150",
     database="StMarysSchool_MariaDB")
 
+pupils = ["Alex", "Cameron", "Charlie", "Chris", "Daniel", "David", "Erin", "Isabel",
+ "James", "Jessica", "John", "Joshua", "Lexi", "Lois", "Lucy", "Mary", "Max",
+ "Michael", "Mimi", "Nathaniel", "Nicholas", "Olivia", "Paul", "Phoebe", "Rachel",
+ "Ryan", "Sally", "Samantha", "Seb", "Susan" ]
+
 #A cursor is a database object that retrieves and also updates data, one row at a time, from a set of data.
 cursor = connection.cursor()
 
@@ -41,15 +46,12 @@ for x in range (1,6):
     print("Program will continue in ",6-x," seconds")
     time.sleep(1)
 
-pupils = ["Mary", "Cameron", "Lois", "Nicholas", "Seb", "Mimi", "Lexi", "John", "Chris", "Susan", "Isabel", "Olivia", "Erin", ]
-
-
-
 while True:
-    James = get_data("James")
-    print(James)
-    get_data("ddddfer") # dummy test to see error handling
-    break
+    for pupil in pupils:
+        pupil = get_data(pupil)
+        print(pupil)        
+        get_data("ddddfer") # dummy test to see error handling
+        break
 
 cursor.close()
 connection.close()
