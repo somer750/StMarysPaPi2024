@@ -2,7 +2,10 @@ import mariadb
 import random
 import time
 
-pupils = ["Alex", "Cameron", "Charlie", "Chris", "Daniel", "David", "Erin", "Isabel", "James", "Jessica", "John", "Joshua", "Lexi", "Lois", "Lucy", "Mary", "Max", "Michael", "Mimi", "Nathaniel", "Nicholas", "Olivia", "Paul", "Phoebe", "Rachel", "Ryan", "Sally", "Samantha", "Seb", "Susan" ]
+pupils = ["Alex", "Cameron", "Charlie", "Chris", "Daniel", "David", "Erin", "Isabel",
+ "James", "Jessica", "John", "Joshua", "Lexi", "Lois", "Lucy", "Mary", "Max",
+ "Michael", "Mimi", "Nathaniel", "Nicholas", "Olivia", "Paul", "Phoebe", "Rachel",
+ "Ryan", "Sally", "Samantha", "Seb", "Susan" ]
 
 connection = mariadb.connect(
     user="stmarys",
