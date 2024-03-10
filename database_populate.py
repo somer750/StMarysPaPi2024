@@ -2,6 +2,8 @@ import mariadb
 import random
 import time
 
+pupils = ["Alex", "Cameron", "Charlie", "Chris", "Daniel", "David", "Erin", "Isabel", "James", "Jessica", "John", "Joshua", "Lexi", "Lois", "Lucy", "Mary", "Max", "Michael", "Mimi", "Nathaniel", "Nicholas", "Olivia", "Paul", "Phoebe", "Rachel", "Ryan", "Sally", "Samantha", "Seb", "Susan" ]
+
 connection = mariadb.connect(
     user="stmarys",
     password="5ch00l##",
@@ -21,11 +23,10 @@ def add_data(device, student, status):
     except database.Error as e:
         print(f"Error adding entry to database: {e}")
 
-for x in range(30):
+for pupil in pupils:
     stations = ["pupil_station_1", "pupil_station_2", "pupil_station_3", "pupil_station_4", "pupil_station_5", "water_fountain", "playground", "panic_button", "pocket_module"]
-    pupils = ["Alex", "Cameron", "Charlie", "Chris", "Daniel", "David", "Erin", "Isabel", "James", "Jessica", "John", "Joshua", "Lexi", "Lois", "Lucy", "Mary", "Max", "Michael", "Mimi", "Nathaniel", "Nicholas", "Olivia", "Paul", "Phoebe", "Rachel", "Ryan", "Sally", "Samantha", "Seb", "Susan" ]
     status = random.randint(1,5)
-    pupil = random.choice(pupils)
     station = random.choice(stations)
     add_data(station, pupil, status)
+
 connection.close()
