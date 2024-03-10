@@ -18,7 +18,6 @@ connection = mariadb.connect(
 #A cursor is a database object that retrieves and also updates data, one row at a time, from a set of data.
 cursor = connection.cursor()
 
-
 def get_data(studentquery):
     try:
       statement = "SELECT student, status FROM students WHERE student=%s ORDER BY record_id DESC"
@@ -41,6 +40,9 @@ print("Display cleared. Press CTRL + C to stop the program")
 for x in range (1,6):
     print("Program will continue in ",6-x," seconds")
     time.sleep(1)
+
+pupils = ["Mary", "Cameron", "Lois", "Nicholas", "Seb", "Mimi", "Lexi", "John", "Chris", "Susan", "Isabel", "Olivia", "Erin", ]
+
 
 
 while True:
