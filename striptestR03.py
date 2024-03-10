@@ -1,4 +1,3 @@
-  GNU nano 7.2                                      striptestR03.py                                                
 # you MUST use sudo privileges to run this program
 # working version,reduced brightness in leds
 
